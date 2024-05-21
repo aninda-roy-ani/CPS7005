@@ -1,48 +1,46 @@
-/* Universal styles for all <p> elements */
-p {
-    font-family: Arial, sans-serif;
-    color: #333;
+body {
+    font-family: 'Arial', sans-serif;
+    color: #c5c6c7;
+    line-height: 1.6;
+    background: url('https://wallpapers.com/images/high/ned-stark-of-game-of-thrones-yny5e9tb3tvw8r3m.webp') no-repeat center center fixed;
+    background-size: cover;
 }
-
-/* Class Selector: Styles for elements with class="highlight" */
-.highlight {
-    color: #ff0000;
-    font-weight: bold;
-}
-
-/* ID Selector: Styles for element with id="header" */
-#header {
+header {
     background-color: #333;
-    color: white;
-    padding: 10px;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
-
-/* Descendant Selector: Styles for <p> elements inside <article> */
-article p {
-    font-style: italic;
-    color: #666;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-
-/* Child Selector: Styles for <li> elements that are direct children of <ul> */
-ul > li {
-    margin-left: 20px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
-
-/* Adjacent Sibling Selector: Styles for <p> immediately after an <h2> */
-h2 + p {
-    margin-top: 0;
-    font-size: 1.1em;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
-
-/* Attribute Selector: Styles for <input> elements with type="text" */
-input[type="text"] {
-    border: 1px solid #ccc;
-    padding: 5px;
+main {
+    padding: 20px;
 }
-
-h1 {
-    color: #0077cc;
-    font-size: 24px;
-    margin-bottom: 10px;
+section {
+    margin-bottom: 30px;
+}
+h2 {
+    color: #555151;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
 }
