@@ -1,0 +1,48 @@
+/* Universal styles for all <p> elements */
+p {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Class Selector: Styles for elements with class="highlight" */
+.highlight {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* ID Selector: Styles for element with id="header" */
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Descendant Selector: Styles for <p> elements inside <article> */
+article p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Child Selector: Styles for <li> elements that are direct children of <ul> */
+ul > li {
+    margin-left: 20px;
+}
+
+/* Adjacent Sibling Selector: Styles for <p> immediately after an <h2> */
+h2 + p {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+/* Attribute Selector: Styles for <input> elements with type="text" */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+h1 {
+    color: #0077cc;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
