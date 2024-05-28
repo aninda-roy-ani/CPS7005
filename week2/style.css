@@ -1,0 +1,118 @@
+/* Styles for screens wider than 768 pixels */
+/* @media screen and (max-width: 599px) {
+    body {
+        font-size: 12px;
+        background-color: #e0e0e0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    body {
+        font-size: 14px;
+        background-color: #f0f0f0;
+    }
+} */
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #c5c6c7;
+    line-height: 1.6;
+    background: url('https://wallpapers.com/images/high/ned-stark-of-game-of-thrones-yny5e9tb3tvw8r3m.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 30px;
+}
+h2 {
+    color: #555151;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.about img {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* Hide burger button on larger screens */
+    }
+  
+    .menu {
+      display: flex;
+    }
+  
+    .menu li {
+      border: none;
+      margin-right: 20px;
+    }
+
+    .gallery img {
+        width: 20%;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .about p{
+        display: block;
+    }
+
+    .about h6{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: flex; /* Hide burger button on larger screens */
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    .menu li {
+      border: none;
+      margin-right: 20px;
+    }
+
+    .gallery img {
+        width: 90%;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .about p{
+        display: none;
+    }
+
+    .about h6{
+        display: block;
+    }
+}
