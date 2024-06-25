@@ -1,0 +1,21 @@
+body{
+    background-color: #403f3f;
+}
+.container{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+#myCanvas {
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    background-color: #403f3f;
+    box-shadow: 0 0 100px rgba(245, 242, 242, 0.5);
+}
