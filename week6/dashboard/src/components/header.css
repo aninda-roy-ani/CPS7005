@@ -1,0 +1,30 @@
+.Header {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.Header ul {
+    list-style-type: none;
+    margin: 0 700px;
+    padding: 0;
+}
+
+.Header li {
+    float: left;
+}
+
+.Header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: wavy;
+}
+
+.Header li a:hover {
+    background-color: #111;
+    transform: scale(1.2);
+}

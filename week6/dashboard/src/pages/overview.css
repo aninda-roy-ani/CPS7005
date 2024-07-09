@@ -1,0 +1,14 @@
+.cards {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 0 -10px; 
+  }
+  
+  .card {
+    padding: 10px;
+    margin: 10px; 
+    border: 5px solid #ebc90b;
+    border-radius: 15px;
+    background-color: #f08a8a;
+  }
+  
