@@ -1,14 +1,64 @@
-.cards {
-    display: flex; 
-    flex-wrap: wrap; 
-    margin: 0 -10px; 
-  }
-  
-  .card {
-    padding: 10px;
-    margin: 10px; 
-    border: 5px solid #ebc90b;
-    border-radius: 15px;
-    background-color: #f08a8a;
-  }
-  
+.crypto-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.crypto-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.crypto-card p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.btn-details {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn-details:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.crypto-details {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-details h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.crypto-details p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}

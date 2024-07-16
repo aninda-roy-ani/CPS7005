@@ -1,35 +1,50 @@
-import Footer from '../components/footer';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import Header from '../components/header';
-import './overview.css'
-
-const cryptoData = [
-    { id: 1, name: 'Bitcoin (BTC)', price: '$40,000' },
-    { id: 2, name: 'Ethereum (ETH)', price: '$3,000' },
-    { id: 3, name: 'Tether (USDT)', price: '$1.00' },
-    { id: 4, name: 'USD Coin (USDC)', price: '$1.00' },
-    { id: 5, name: 'Binance Coin (BNB)', price: '$300' },
-    { id: 6, name: 'XRP (XRP)', price: '$0.50' },
-    { id: 7, name: 'Cardano (ADA)', price: '$1.00' },
-    { id: 8, name: 'Solana (SOL)', price: '$50' },
-    { id: 9, name: 'Polkadot (DOT)', price: '$10.00' },
-    { id: 10, name: 'Dogecoin (DOGE)', price: '$0.10' },
-  ];
+import Footer from '../components/footer';
+import './overview.css';
 
 function Overview() {
-  return (
-    <div>
-      <Header />
-      <div className='cards'>  
-        {cryptoData.map((crypto) => (
-          <div key={crypto.id} className='card'> 
-            <h2>{crypto.name}</h2> 
-            <h3>{crypto.price}</h3>
-          </div>
-        ))}
-      </div>
-      <Footer />
-    </div>
-  );
+    const [cryptoData, setCryptoData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                axios.defaults.baseURL = 'https://api.coingecko.com/api/v3';
+                const response = await axios.get("coins/markets", {
+                    params: {
+                        vs_currency: "usd",
+                        per_page: 12,
+                        page: 1
+                    }
+                });
+                setCryptoData(response.data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            <Header />
+            <div className="crypto-cards">
+                {cryptoData.map((crypto) => (
+                    <div key={crypto.id} className="crypto-card">
+                        <h2>{crypto.name} ({crypto.symbol.toUpperCase()})</h2>
+                        <h3>Current Price: ${crypto.current_price.toFixed(2)}</h3>
+                        <h4>Market Cap: ${crypto.market_cap.toLocaleString()}</h4>
+                        <h4>24h Change: {crypto.price_change_percentage_24h.toFixed(2)}%</h4>
+                        <Link to={`/detail/${crypto.id}`} className="btn-details">View Details</Link>
+                    </div>
+                ))}
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
 export default Overview;
