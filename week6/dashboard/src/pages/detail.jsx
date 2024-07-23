@@ -46,31 +46,31 @@ function Detail() {
             <Header />
             <div className="crypto-details">
                 <h1>{cryptoDetail.name} ({cryptoDetail.symbol.toUpperCase()}) Details</h1>
-                <p>Current Price: ${cryptoDetail.market_data?.current_price?.usd}</p>
-                <p>Market Cap: ${cryptoDetail.market_data?.market_cap?.usd.toLocaleString()}</p>
-                <p>24h Change: {cryptoDetail.market_data?.price_change_percentage_24h?.toFixed(2)}%</p>
+                <h3>Current Price: ${cryptoDetail.market_data?.current_price?.usd}</h3>
+                <h3>Market Cap: ${cryptoDetail.market_data?.market_cap?.usd.toLocaleString()}</h3>
+                <h3>24h Change: {cryptoDetail.market_data?.price_change_percentage_24h?.toFixed(2)}%</h3>
                 <div className="details-section">
                     <h2>Supply Information</h2>
-                    <p>Total Supply: {cryptoDetail.market_data?.total_supply?.toLocaleString()} {cryptoDetail.symbol.toUpperCase()}</p>
-                    <p>Circulating Supply: {cryptoDetail.market_data?.circulating_supply?.toLocaleString()} {cryptoDetail.symbol.toUpperCase()}</p>
-                    <p>Max Supply: {cryptoDetail.market_data?.max_supply ? `${cryptoDetail.market_data.max_supply.toLocaleString()} ${cryptoDetail.symbol.toUpperCase()}` : "No max supply"}</p>
+                    <h5>Total Supply: {cryptoDetail.market_data?.total_supply?.toLocaleString()} {cryptoDetail.symbol.toUpperCase()}</h5>
+                    <h5>Circulating Supply: {cryptoDetail.market_data?.circulating_supply?.toLocaleString()} {cryptoDetail.symbol.toUpperCase()}</h5>
+                    <h5>Max Supply: {cryptoDetail.market_data?.max_supply ? `${cryptoDetail.market_data.max_supply.toLocaleString()} ${cryptoDetail.symbol.toUpperCase()}` : "No max supply"}</h5>
                 </div>
                 <div className="details-section">
                     <h2>Additional Information</h2>
-                    <p>Market Cap Rank: {cryptoDetail.market_cap_rank}</p>
-                    <p>Total Markets: {cryptoDetail.markets?.length || 0}</p>
-                    <p>All Time High: ${cryptoDetail.market_data?.ath?.usd}</p>
-                    <p>All Time Low: ${cryptoDetail.market_data?.atl?.usd}</p>
+                    <h5>Market Cap Rank: {cryptoDetail.market_cap_rank}</h5>
+                    <h5>Total Markets: {cryptoDetail.markets?.length || 0}</h5>
+                    <h5>All Time High: ${cryptoDetail.market_data?.ath?.usd}</h5>
+                    <h5>All Time Low: ${cryptoDetail.market_data?.atl?.usd}</h5>
                 </div>
                 <div className="details-section">
                     <h2>Scores</h2>
-                    <p>Developer Score: {cryptoDetail.developer_score}</p>
-                    <p>Community Score: {cryptoDetail.community_score}</p>
-                    <p>Public Interest Score: {cryptoDetail.public_interest_score}</p>
+                    <h5>Developer Score: {cryptoDetail.developer_score}</h5>
+                    <h5>Community Score: {cryptoDetail.community_score}</h5>
+                    <h5>Public Interest Score: {cryptoDetail.public_interest_score}</h5>
                 </div>
                 <div className="description">
                     <h2>Description</h2>
-                    <p>{cryptoDetail.description?.en || "No description available"}</p>
+                    <h6>{cryptoDetail.description?.en || "No description available"}</h6>
                 </div>
             </div>
             <Footer />
